@@ -1,13 +1,12 @@
 {
   "providerId": "hubspot.com",
   "providerName": "HubSpot",
-  "serviceId": "hubspot-template-4",
+  "serviceId": "hubspot-template-4-subdomain",
   "serviceName": "HubSpot CMS Site",
   "version": 1,
-  "syncBlock": true,
   "logoUrl": "https://domainconnect.org/wp-content/uploads/2017/02/HubSpot-768x223.png",
   "description": "Enables a domain to work with HubSpot",
-  "variableDescription": "txtData: txt data, aDestination: destination for A record, cnameDestination: destination for CNAME record, cNameHost: host for CNAME record",
+  "variableDescription": "txtData: txt data, aDestination: destination for A record, cnameDestination1, cnameDestination2: destination for CNAME record, cNameHost: host for CNAME record",
   "hostRequired": true,
   "records": [
     {
@@ -18,10 +17,17 @@
       "ttl": 600
     },
     {
-      "groupId": "cname",
+      "groupId": "cname1",
       "type": "CNAME",
       "host": "@",
-      "pointsTo": "%cnameDestination%",
+      "pointsTo": "%cnameDestination1%",
+      "ttl": 600
+    },
+    {
+      "groupId": "cname2",
+      "type": "CNAME",
+      "host": "@",
+      "pointsTo": "%cnameDestination2%",
       "ttl": 600
     }
   ]
