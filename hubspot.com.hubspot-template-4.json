@@ -7,7 +7,7 @@
   "logoUrl": "https://domainconnect.org/wp-content/uploads/2017/02/HubSpot-768x223.png",
   "description": "Enables a domain to work with HubSpot CMS",
   "variableDescription": "a1, a2, cNameHost, cName, txt",
-  "hostRequired": true,
+  "hostRequired": false,
   "records": [
     {
       "groupId": "a",
@@ -26,7 +26,7 @@
     {
       "groupId": "cname",
       "type": "CNAME",
-      "host": "@",
+      "host": "%cNameHost%",
       "pointsTo": "%cname%",
       "ttl": 600
     },
