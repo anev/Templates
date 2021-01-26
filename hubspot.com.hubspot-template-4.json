@@ -1,0 +1,41 @@
+{
+  "providerId": "hubspot.com",
+  "providerName": "HubSpot",
+  "serviceId": "hubspot-connect",
+  "serviceName": "HubSpot CMS Site",
+  "version": 1,
+  "logoUrl": "https://domainconnect.org/wp-content/uploads/2017/02/HubSpot-768x223.png",
+  "description": "Enables a domain to work with HubSpot CMS",
+  "variableDescription": "a1, a2, cNameHost, cName, txt",
+  "hostRequired": true,
+  "records": [
+    {
+      "groupId": "a",
+      "type": "A",
+      "host": "@",
+      "pointsTo": "%a1%",
+      "ttl": 600
+    },
+    {
+      "groupId": "a",
+      "type": "A",
+      "host": "@",
+      "pointsTo": "%a2%",
+      "ttl": 600
+    },
+    {
+      "groupId": "cname",
+      "type": "CNAME",
+      "host": "@",
+      "pointsTo": "%cname%",
+      "ttl": 600
+    },
+    {
+      "groupId": "txt",
+      "type": "TXT",
+      "host": "@",
+      "data": "%txt%",
+      "ttl": 600
+    }
+  ]
+}
